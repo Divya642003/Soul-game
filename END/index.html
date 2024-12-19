@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result of Soul-game</title>
+    <link rel="stylesheet" href="./../style.css">
+    <link rel="stylesheet" href="end.css">
+</head>
+<body>
+   
+
+    <header>
+        <div class="image-container">
+            <div class="text">YOU HAVE ...</div>
+          </div>
+    </header>
+   
+    <main>
+  <section>
+
+    <h2></h2>
+    <img src="" alt="Power Image"/>
+
+    <span> 
+         Your Score : &nbsp;
+      
+        
+    </span>
+    <p></p>
+
+
+  </section>
+    </main>
+
+    <footer>
+      <audio src="./../audiio/positive-tone-man-says-oh-my-god-186558.mp3" type="audiio/mp3"></audio>
+      <div style="padding-right: 10%;">
+         <h1>About</h1>
+         <p>Discover your inner essence with <em>SoulQuest</em>, a captivating quiz game that unveils the true nature of your soul.
+         </p>
+    <p> Make choices, face dilemmas, and watch as your decisions shape the final reflection of your spirit. Dive into the journey and uncover which soul archetype truly defines you! </p>
+    <div>
+     <p><h3>Devloped by </h3> Divya Singh</p>
+    </div>
+     <div style="padding-left: 10%;">
+         <h3>Contact</h3>
+         <p><a href="mailto:soul@gmail.com">📧 soul@gmail.com</a></p>
+     </div>
+   </footer>
+</body>
+</html>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded',function()
+{
+    const queryString = window.location.search;
+    const urlparams = new URLSearchParams(queryString);
+    const sum = urlparams.get('sum');
+   
+    let msg="";
+    let imgS="";
+    let para="";
+    let a="";
+   if(sum>=70 && sum<=120)
+   {
+      msg="REGULAR SOUL .";
+      imgS = "./../images/1.avif";
+      para="you got a sound body and soul . you common , normal and perfect. you are guided by every light you can see. unfortunately , many will not notice your greatness."
+   }
+   else if(sum>=130 && sum<=180)
+   {
+      msg="DEMON SOUL";
+      imgS = "./../images/2.avif";
+      para="you might be very short tempered. you're free to think whatever you wish and do whatever you like to do .you hate those who are selfish and only think about their selfish needs."
+   }
+   else if(sum>=190 && sum<=230)
+   {
+      msg="ANGEL SOUL ";
+      imgS = "./../images/3.avif";
+      para="you possess a gentle and quiet soul. you are always there for others during their hard times. you have a deep & intense personality. you always wanna spread kindness, have compassion and make a difference on earth."
+   }
+   else if(sum>=240 && sum<=290)
+   {
+      msg="GODLY SOUL";
+      imgS = "./../images/4.3.avif";
+      para="you are unique. your soul is one of the strongest ones to have ever existed on the earth. you have charisma and a decent sense of leadership. the sun is by your side."
+   }
+   else if(sum>=300 && sum<=350 )
+   {
+      msg="POLTERGEIST SOUL ";
+      imgS = "./../images/5.webp";
+      para="you are that supernatural one who strives to be known. you are considered to be ruthless, determined. you want others attention and do whatever you need to be noticed by other souls."
+   }
+   else{
+    msg="";
+    imgS="./../images/smile.avif";
+    para="you didn't gained one . try again ..."
+   }
+
+if(sum)
+{
+    document.getElementsByTagName("h2")[0].innerText = msg;
+    document.getElementsByTagName("span")[0].innerText += sum+" / 350";
+    const imgElement = document.getElementsByTagName("img")[0];
+    imgElement.src = imgS;
+    document.getElementsByTagName("p")[0].innerText = para;
+  console.log("sum : ",sum);
+  console.log("power : ",msg);
+
+ document.getElementsByTagName("audio")[0].play();
+ 
+}
+
+});
+</script>
