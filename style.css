@@ -280,7 +280,7 @@ justify-content: space-around;
    }
    .footer-section{
     margin-bottom: 20px;
-    
+    width : 100% !important;
    }
 
    canvas{
@@ -335,6 +335,7 @@ justify-content: space-around;
    }
    .footer-section{
     margin-bottom: 20px;
+   
     
    }
 
@@ -346,10 +347,13 @@ justify-content: space-around;
     justify-content: space-between;
     align-items: flex-start;
     background:rgba(31, 76, 101,0.6); /* Adjust background to match desired style */
-    padding: 20px 20px;
+    padding: 30px 20px;
     border-top: 2px solid black;
 }
 
+.footer-section:first-of-type{
+    width: 50%;
+}
 
 
 .footer-section h3 {
